@@ -1,0 +1,26 @@
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  white-space: nowrap;
+  padding: 20px 0;
+  height: 40px; /* set fixed height to show content */
+  margin-top: 90px; 
+}
+
+.marquee-content {
+  padding-left: 100%; /* start off-screen on right */
+  animation: scroll-left 15s linear infinite;
+  font-size: 30px;
+  color: #e40a0a;
+  margin-bottom: 20px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

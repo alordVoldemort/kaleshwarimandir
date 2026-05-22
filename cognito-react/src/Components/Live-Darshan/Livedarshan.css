@@ -1,0 +1,510 @@
+.live-darshan-container {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.live-darshan-hero-section {
+  width: 90%;
+  margin: 0 auto 60px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+  height: 70vh;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+ 
+}
+
+.live-darshan-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85);
+  transition: transform 0.6s ease;
+}
+
+.live-darshan-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.live-darshan-content {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  border-radius: 15px;
+  
+}
+
+.live-darshan-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+.live-darshan-subtitle {
+  font-size: 1.5rem;
+  color: #ffebc6;
+  font-weight: 500;
+}
+
+/* YouTube Live Stream Section */
+.youtube-live-section {
+  width: 100%;
+  margin: 0 auto 60px auto;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.youtube-section-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.youtube-section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.youtube-section-description {
+  font-size: 1.2rem;
+  color: #6c757d;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ===================== Video Wrapper ===================== */
+.video-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  background: linear-gradient(145deg, #1a1a2e, #16213e);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  padding: 8px;
+}
+
+.live-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  background: #000;
+  display: block;
+  object-fit: cover;
+}
+
+.video-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px 16px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.live-indicator {
+  width: 10px;
+  height: 10px;
+  background: #ff4444;
+  border-radius: 50%;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 68, 68, 0.7);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 5px rgba(255, 68, 68, 0.4);
+  }
+}
+
+.live-text {
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ===================== Responsive ===================== */
+@media (max-width: 1024px) {
+  .live-darshan-title {
+    font-size: 2.2rem;
+  }
+  .live-darshan-subtitle {
+    font-size: 1.2rem;
+  }
+  .live-darshan-content {
+    padding: 15px;
+  }
+  .youtube-section-title {
+    font-size: 2rem;
+  }
+  .youtube-section-description {
+    font-size: 1.1rem;
+  }
+  .youtube-live-section {
+    padding: 30px 15px;
+  }
+  .video-container {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .live-darshan-hero-section {
+    height: 60vh;
+  }
+  .live-darshan-title {
+    font-size: 1.8rem;
+  }
+  .live-darshan-subtitle {
+    font-size: 1rem;
+  }
+  .live-darshan-content {
+    padding: 15px;
+    bottom: 20px;
+  }
+  .youtube-section-title {
+    font-size: 1.8rem;
+  }
+  .youtube-section-description {
+    font-size: 1rem;
+  }
+  .youtube-live-section {
+    padding: 25px 15px;
+    margin-bottom: 40px;
+  }
+  .youtube-section-header {
+    margin-bottom: 25px;
+  }
+  .video-container {
+    max-width: 100%;
+    padding: 6px;
+    border-radius: 12px;
+  }
+  .live-video {
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .live-darshan-hero-section {
+    height: 50vh;
+  }
+  .live-darshan-title {
+    font-size: 1.5rem;
+  }
+  .live-darshan-subtitle {
+    font-size: 0.95rem;
+  }
+  .live-darshan-content {
+    padding: 10px;
+    bottom: 15px;
+  }
+  .youtube-section-title {
+    font-size: 1.5rem;
+  }
+  .youtube-section-description {
+    font-size: 0.9rem;
+  }
+  .youtube-live-section {
+    padding: 20px 10px;
+    margin-bottom: 30px;
+  }
+  .youtube-section-header {
+    margin-bottom: 20px;
+  }
+  .video-container {
+    padding: 4px;
+    border-radius: 10px;
+  }
+  .live-video {
+    border-radius: 6px;
+  }
+  .video-status {
+    padding: 6px 12px;
+  }
+  .live-indicator {
+    width: 8px;
+    height: 8px;
+  }
+  .live-text {
+    font-size: 0.75rem;
+  }
+}
+
+/* ===================== Audio Controls ===================== */
+.audio-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+  padding: 15px 20px;
+  background: linear-gradient(145deg, #1a1a2e, #16213e);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.audio-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+}
+
+.audio-toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
+}
+
+.audio-toggle-btn.playing {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+}
+
+.audio-toggle-btn.playing:hover {
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.5);
+}
+
+.audio-icon {
+  font-size: 1.3rem;
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+.volume-label {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.volume-slider {
+  width: 120px;
+  height: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.volume-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Audio Controls Responsive */
+@media (max-width: 480px) {
+  .audio-controls {
+    padding: 12px 15px;
+  }
+
+  .audio-toggle-btn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+
+  .audio-icon {
+    font-size: 1.1rem;
+  }
+
+  .volume-slider {
+    width: 100px;
+  }
+
+  .volume-label {
+    font-size: 0.8rem;
+  }
+}
+
+/* ===================== Audio Control Button (Safari Compatible) ===================== */
+.audio-control-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.audio-control-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.audio-control-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.5);
+}
+
+.audio-control-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+}
+
+.audio-control-btn.playing {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+  animation: audioPlaying 2s ease-in-out infinite;
+}
+
+.audio-control-btn.playing:hover {
+  box-shadow: 0 8px 25px rgba(40, 167, 69, 0.5);
+}
+
+@keyframes audioPlaying {
+  0%, 100% {
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+  }
+  50% {
+    box-shadow: 0 6px 30px rgba(40, 167, 69, 0.6), 0 0 40px rgba(40, 167, 69, 0.3);
+  }
+}
+
+.audio-control-btn .audio-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.audio-control-btn .audio-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.audio-control-btn .audio-text {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Audio Control Button Responsive */
+@media (max-width: 768px) {
+  .audio-control-btn {
+    padding: 12px 22px;
+    font-size: 0.95rem;
+  }
+
+  .audio-control-btn .audio-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .audio-control-btn .audio-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .audio-control-container {
+    margin-top: 12px;
+  }
+
+  .audio-control-btn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+    gap: 8px;
+  }
+
+  .audio-control-btn .audio-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .audio-control-btn .audio-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}

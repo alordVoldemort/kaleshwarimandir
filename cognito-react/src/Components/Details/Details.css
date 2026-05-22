@@ -1,0 +1,283 @@
+/* Root variables */
+:root {
+  --primary: #6a3093;
+  --secondary: #f5f5f5;
+  --accent: #ff6b6b;
+  --text: #222;
+  --text-light: #666;
+}
+
+/* Container */
+.details-container {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+  padding: 5rem 1rem;
+  background: #fffaf0;
+}
+
+/* Header */
+.details-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.details-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.details-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-light);
+}
+
+.divider {
+  width: 80px;
+  height: 4px;
+  margin: 1rem auto;
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+/* Info Card */
+.info-card {
+  background: linear-gradient(135deg, #2c1a4d, #3d2968);
+  color: white;
+  border-radius: 1.2rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 1rem auto;
+  max-width: 900px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.info-icon {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.info-icon svg {
+  width: 32px;
+  height: 32px;
+  color: #fff;
+}
+
+.info-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.info-text {
+  font-size: 0.95rem;
+  color: #f1f1f1;
+  align-items: center;
+}
+
+/* Table */
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+
+.pooja-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.pooja-table th,
+.pooja-table td {
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.95rem;
+  vertical-align: top;
+}
+
+.pooja-table thead {
+  background: var(--primary);
+  color: white;
+}
+
+.header-cell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sort-indicator svg {
+  margin-left: 8px;
+  stroke: white;
+}
+
+.pooja-type-content {
+  display: flex;
+  align-items: center;
+}
+
+.pooja-icon svg {
+  margin-right: 0.5rem;
+  fill: var(--primary);
+  width: 18px;
+  height: 18px;
+}
+
+.amount-badge {
+  background: var(--accent);
+  color: white;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* Additional Info Card */
+.additional-info-card {
+  background: #d7bbd1;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.03);
+}
+
+.additional-info-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.additional-info-text p {
+  margin-bottom: 0.8rem;
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* CTA Card */
+.cta-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #6a3093, #a044ff);
+  border-radius: 12px;
+  padding: 2rem;
+  color: white;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cta-content {
+  flex: 1;
+  min-width: 250px;
+}
+
+.cta-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cta-content p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  background: #fff;
+  color: #6a3093;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #f5f5f5;
+}
+
+.cta-button svg {
+  margin-left: 8px;
+  width: 18px;
+  height: 18px;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .details-title {
+    font-size: 1.8rem;
+  }
+
+  .info-card,
+  .additional-info-card,
+  .cta-card {
+    padding: 1.2rem;
+  }
+
+  .cta-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pooja-table {
+    min-width: 100%;
+    font-size: 0.85rem;
+  }
+
+  .pooja-table th,
+  .pooja-table td {
+    padding: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .details-container {
+    padding: 5rem 0.5rem;
+  }
+
+  .details-title {
+    font-size: 1.6rem;
+  }
+
+  .info-card,
+  .additional-info-card {
+    flex-direction: column;
+  }
+
+  .info-icon {
+    margin-bottom: 0.5rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .pooja-table {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pooja-table {
+    font-size: 0.75rem;
+  }
+
+  .cta-button {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .additional-info-title {
+    font-size: 1rem;
+  }
+}

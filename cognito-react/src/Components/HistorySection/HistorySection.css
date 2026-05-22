@@ -1,0 +1,343 @@
+/* ========== BASE STYLES ========== */
+.history-section {
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+.section-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.history-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  z-index: 10;
+}
+
+.section-header .title {
+  font-size: 2.5rem;
+  color: #efb204;
+  text-shadow: 0 0 8px rgba(213, 170, 83, 0.4);
+}
+
+.title-underline {
+  width: 150px;
+  height: 4px;
+  background: linear-gradient(to right, transparent, #d5aa53, transparent);
+  margin: 0.5rem auto;
+  border-radius: 2px;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 2rem;
+  z-index: 10;
+}
+
+/* ========== CARD STYLES ========== */
+.history-card {
+  background: rgba(255, 250, 240, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2.5rem;
+  width: 75%;
+  display: flex;
+  gap: 2rem;
+  border: 1px solid rgba(213, 170, 83, 0.3);
+  position: relative;
+  box-shadow: 0 10px 30px rgba(93, 64, 55, 0);
+  background-blend-mode: soft-light;
+  background-repeat: repeat;
+  background-size: 30%;
+  opacity: 0.95;
+}
+
+.history-card:hover {
+  background-blend-mode: overlay;
+}
+
+.card-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(213, 170, 83, 0.1) 0%, transparent 70%);
+  z-index: -1;
+  border-radius: 20px;
+}
+
+/* ========== IMAGE STYLES ========== */
+.year-image {
+  width: 304px;
+  height: 380px;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 3px solid rgba(213, 170, 83, 0.5);
+  box-shadow: 0 10px 30px rgba(93, 64, 55, 0.2);
+  flex-shrink: 0;
+}
+
+.year-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ========== TEXT CONTENT ========== */
+.text-content {
+  flex: 1;
+}
+
+.content-body p {
+  background: rgba(240, 230, 210, 0.4);
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #000;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+/* ========== TIMELINE ========== */
+.timeline-nav-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2.5rem;
+  width: 25%;
+}
+
+.timeline-marker-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #f0e6d2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #d5aa53;
+  box-shadow: 0 0 15px rgba(213, 170, 83, 0.3);
+  transition: all 0.3s ease;
+}
+
+.timeline-marker-circle .marker-inner {
+  color: #5d4037;
+  font-weight: bold;
+  font-size: 1.1rem;
+  z-index: 2;
+}
+
+.timeline-marker-circle.active {
+  background: #d5aa53;
+  transform: scale(1.1);
+}
+
+.timeline-marker-circle.active .marker-inner {
+  color: #fffaf0;
+}
+
+.timeline-marker-circle .active-pulse {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(213, 170, 83, 0.3);
+  z-index: 1;
+}
+
+/* ========== MISCELLANEOUS ========== */
+.badge {
+  display: inline-block;
+  background: #d5aa53;
+  color: #5d4037;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.static-flower,
+.flower-cluster {
+  position: relative;
+  z-index: 2;
+  opacity: 0.7;
+  pointer-events: none;
+  filter: drop-shadow(0 0 5px rgba(213, 170, 83, 0.3));
+}
+
+/* ========== TITLE SLIDER ========== */
+.title-slider-container {
+  width: 100%;
+  height: 100px;
+  margin: 2rem 0 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.title-slide-content {
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.title-slider-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  right: 0;
+}
+
+.title-slider-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 215, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.title-slider-dot.active {
+  border-color: #ffd700;
+}
+
+.title-slider-dot.active .dot-inner {
+  width: 8px;
+  height: 8px;
+  background: #ffd700;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ========== RESPONSIVE STYLES ========== */
+@media (max-width: 992px) {
+  .content-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .history-card {
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .year-image {
+    width: 100%;
+    height: 630px;
+    margin-bottom: 1rem;
+  }
+
+  .timeline-nav-right {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .timeline-marker-circle {
+    width: 65px;
+    height: 65px;
+  }
+
+  .title-slide-content {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .history-section {
+    padding: 2rem 1rem;
+  }
+
+  .section-header .title {
+    font-size: 1.8rem;
+  }
+
+  .title-slide-content {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .history-card {
+    padding: 1.5rem;
+  }
+
+  .year-image {
+    height: 300px;
+  }
+
+  .timeline-marker-circle {
+    width: 55px;
+    height: 55px;
+    font-size: 0.85rem;
+  }
+
+  .badge {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.8rem;
+  }
+
+  .content-body p {
+    font-size: 0.9rem;
+  }
+
+  .title-slider-dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .title-slider-dot.active .dot-inner {
+    width: 6px;
+    height: 6px;
+  }
+}

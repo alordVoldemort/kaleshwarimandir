@@ -1,0 +1,399 @@
+  /* =================== Navbar Base Styles =================== */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.09);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 12px 16px;
+    width: 100%;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  /* =================== LOGO + TITLE =================== */
+  .left-section {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+  }
+  .logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    min-width: 0;
+  }
+  .logo-img {
+    width: 38px;
+    height: 38px;
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
+  .temple-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #d35400;
+    white-space: normal;
+    text-overflow: unset;
+    overflow: visible;
+    min-width: 0;
+    max-width: 100vw;
+    line-height: 1.16;
+  }
+
+  /* =================== HAMBURGER =================== */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 2001;
+    margin-left: 8px;
+  }
+  .hamburger .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s linear;
+  }
+  .hamburger.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    background-color: #d35400;
+  }
+  .hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+    background-color: #d35400;
+  }
+
+  /* =================== MAIN NAV LINKS =================== */
+  .right-section {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  .nav-links {
+    display: flex;
+    font-weight: 500;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+  .nav-links li {
+    position: relative;
+    margin-left: 10px;
+  }
+  .nav-links a,
+  .dropdown-toggle {
+    text-decoration: none;
+    font-weight: 500;
+    color: #333;
+    font-size: 1rem;
+    padding: 9px 13px;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+    display: block;
+    text-align: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .nav-links a:hover,
+  .dropdown-toggle:hover {
+    color: #d35400;
+    background-color: #fef6e9;
+  }
+
+  /* =================== DONATION BUTTON =================== */
+  .donation-link {
+    background: none !important;
+    border-radius: 30px;
+    padding: 8px 16px !important;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+  }
+  .donation-link:hover {
+    background: #fef6e9 !important;
+    color: #a04000 !important;
+    border-color: #a04000;
+  }
+
+  /* =================== LANGUAGE TOGGLE =================== */
+  .language-toggle {
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 8px 16px;
+    color: #fff;
+    background-color: #d35400;
+    border: none;
+    border-radius: 6px;
+    margin-left: 12px;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  .language-toggle:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+  }
+
+  .language-toggle:active {
+    transform: scale(0.98);
+  }
+
+
+  /* Desktop/Tablet: inside sidebar */
+  .language-toggle.language-sidebar {
+    display: inline-block;
+  }
+
+  /* Mobile-only: top-right button */
+  .language-toggle.language-mobile {
+    display: none;
+    position: absolute;
+    top: 6px;
+    right: 60px;
+    z-index: 2102;
+    padding: 6px 10px;
+    font-size: 0.96rem;
+    font-weight: 600;
+    background: none;
+    color: #d35400;
+  }
+
+  /* =================== DROPDOWN ARROW =================== */
+  .arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 5px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #333;
+    transition: transform 0.3s, border-top-color 0.3s;
+  }
+  .arrow.open {
+    transform: rotate(180deg);
+    border-top-color: #d35400;
+  }
+
+  /* =================== DROPDOWN MENU =================== */
+  .dropdown-content {
+   position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px; /* Increased width */
+  background: #fa9a0b;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease-in-out;
+  z-index: 2002;
+  padding: 0;
+  overflow: hidden;
+  pointer-events: none;
+  }
+  .dropdown-content.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+  }
+  .dropdown-content li {
+    margin: 0;
+    width: 100%;
+    border-bottom: 1px solid #ececec;
+
+  }
+  .dropdown-content li:last-child {
+  border-bottom: none;
+}
+  .dropdown-content a {
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  color: #fcfafa;
+  font-size: 1rem;
+  background-color: transparent;
+  transition: background 0.2s ease, padding-left 0.2s ease;
+  }
+  .dropdown-content a:last-child {
+    border-bottom: none;
+  }
+  .dropdown-content a:hover,
+  .dropdown-content a:focus {
+    background-color: #fff5eb;
+  padding-left: 26px;
+  color: #d35400;
+  font-weight: 600;
+  border-left: 4px solid #d35400;
+  }
+  .dropdown-content::before {
+  content: '';
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, #ffa94d, #ff8c1a);
+}
+
+  /* =================== RESPONSIVE: TABLET =================== */
+  @media (min-width: 820px) and (max-width: 1180px) {
+    .navbar-container {
+      max-width: 100vw;
+      padding: 10px 10px;
+    }
+    .logo-img {
+      width: 30px;
+      height: 30px;
+      margin-right: 7px;
+    }
+    .temple-name {
+      font-size: 1rem;
+      white-space: normal;
+      overflow: visible;
+    }
+    .nav-links li {
+      margin-left: 2px;
+    }
+    .nav-links a, .dropdown-toggle {
+      padding: 7px 8px;
+      font-size: 0.96rem;
+    }
+    .donation-link {
+      padding: 7px 11px !important;
+      font-size: 0.97rem;
+    }
+    .dropdown-content {
+      min-width: 125px;
+      font-size: 0.92rem;
+    }
+    .hamburger {
+      display: none !important;
+    }
+    .right-section {
+      position: static !important;
+      flex-direction: row !important;
+      justify-content: flex-end;
+      align-items: center;
+      transform: none !important;
+      padding-top: 0 !important;
+    }
+  }
+
+  /* =================== RESPONSIVE: MOBILE =================== */
+  @media (max-width: 768px) {
+    .navbar-container {
+      padding: 0 3vw;
+      height: 48px;
+    }
+    .hamburger {
+      display: flex;
+      margin-left: 6px;
+      z-index: 2101;
+    }
+    .left-section {
+      flex: 1;
+      z-index: 2100;
+    }
+    .language-toggle.language-mobile {
+      display: block;
+    }
+    .language-toggle.language-sidebar {
+      display: none;
+    }
+    .right-section {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 88vw;
+      background-color: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      transform: translateX(100%);
+      box-shadow: -7px 0 20px rgba(0,0,0,0.13);
+      padding-top: 60px;
+      z-index: 2002;
+      transition: transform 0.3s;
+    }
+    .right-section.active {
+      transform: translateX(0);
+    }
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+      padding: 0 5vw;
+      align-items: stretch;
+    }
+    .nav-links a,
+    .dropdown-toggle {
+      width: 100%;
+      text-align: left;
+      padding: 14px 0 14px 12px;
+      font-size: 1.07rem;
+      background: none;
+    }
+    .dropdown-content {
+      position: static;
+      box-shadow: none;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #ffa94d 0%, #ff8c1a 100%);
+      transform: none;
+      visibility: visible;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.28s;
+      pointer-events: none;
+      margin-left: 8px;
+    }
+    .dropdown-content.show {
+      max-height: 500px;
+      pointer-events: auto;
+      margin-top: 2px;
+      border-left: 3px solid #fff3;
+      box-shadow: 0 6px 24px rgba(255,140,26,0.13);
+    }
+  }
+
+  /* =================== RESPONSIVE: XS MOBILE =================== */
+  @media (max-width: 480px) {
+    .navbar-container {
+      padding: 0 2vw;
+    }
+    .logo-img {
+      width: 26px;
+      height: 26px;
+    }
+    .temple-name {
+      font-size: 0.80rem;
+    }
+    .language-toggle.language-mobile {
+      top: 9px;
+      font-size: 0.92rem;
+      padding: 4px 6px;
+      right: 44px;
+    }
+  } 

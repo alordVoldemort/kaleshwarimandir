@@ -1,0 +1,382 @@
+/* =================== SECTION: ACTIVITIES SECTION =================== */
+.activities-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif;
+}
+
+/* =================== SECTION: TOP BANNER =================== */
+.top-banner {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.top-banner .banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+  z-index: 1;
+}
+
+.top-banner .banner-image-activities {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  border-radius: 0;
+}
+
+.top-banner .banner-content {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+}
+
+.top-banner .banner-text-container {
+  display: inline-block;
+  border-radius: 10px;
+  transform: translateY(20px);
+  animation: floatUp 1s ease-out forwards;
+}
+
+.top-banner .banner-title {
+  color: white;
+  font-size: 3.5rem;
+  margin: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.top-banner .banner-divider {
+  height: 4px;
+  width: 80px;
+  background: #B1045B;
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+/* =================== SECTION: SECTION HEADER =================== */
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header .section-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+
+/* =================== SECTION: ACTIVITY CARDS CONTAINER =================== */
+.activity-cards-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.activity-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  max-width: 1400px;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+/* =================== SECTION: ACTIVITY CARD =================== */
+.activity-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  height: 420px;
+}
+
+.activity-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+/* =================== SECTION: CARD IMAGE CONTAINER =================== */
+.card-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.card-image-container .card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.8s ease;
+  display: block;
+}
+
+.activity-card:hover .card-image-container .card-image {
+  filter: blur(4px) brightness(0.7);
+  transform: scale(1.05);
+}
+
+.card-image-container .image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 60%);
+  opacity: 0.6;
+  transition: opacity 0.5s ease;
+}
+
+.activity-card:hover .card-image-container .image-overlay {
+  opacity: 0.85;
+}
+
+/* =================== SECTION: ACTIVITY DECORATION =================== */
+.activity-decoration {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  z-index: 3;
+  opacity: 0;
+  transform: translateY(20px) rotate(-15deg);
+  transition: all 0.5s ease 0.2s;
+}
+
+.activity-card:hover .activity-decoration {
+  opacity: 1;
+  transform: translateY(0) rotate(0);
+}
+
+.activity-decoration .decorative-element {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 10px rgba(0,0,0,0.3));
+}
+
+/* =================== SECTION: CARD CONTENT (UPDATED) =================== */
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 80%);
+  color: white;
+  z-index: 2;
+  transition: transform 0.4s ease;
+  text-align: center;
+}
+
+.card-content .activity-title {
+  font-size: 1.4rem;
+  margin: 0;
+  font-weight: 700;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+  text-transform: capitalize;
+}
+
+.card-content .activity-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.activity-card:hover .card-content .activity-description {
+  opacity: 1;
+  max-height: 100px;
+  margin-top: 10px;
+}
+
+/* =================== SECTION: INITIATIVE WAVE =================== */
+.initiative-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 150%;
+  height: 60px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.6s ease;
+  z-index: 1;
+}
+
+.activity-card:hover .initiative-wave {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.initiative-wave svg {
+  width: 100%;
+  height: 100%;
+  animation: initiativeWave 3s linear infinite;
+}
+
+/* =================== SECTION: GALLERY SECTION =================== */
+.gallery-section {
+  margin-top: 5rem;
+  padding: 2rem 0;
+  background: #f8f9fa;
+  border-radius: 15px;
+}
+
+/* =================== SECTION: ANIMATIONS =================== */
+@keyframes floatUp {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes initiativeTitleWave {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes initiativeWave {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-25px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* =================== SECTION: RESPONSIVE DESIGN =================== */
+@media (max-width: 1200px) {
+  .activity-cards {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .activity-cards {
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .activity-card {
+    height: 380px;
+  }
+
+  .section-header .section-title {
+    font-size: 2.5rem;
+  }
+
+  .activity-decoration {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .activities-section {
+    padding: 4rem 0.5rem;
+  }
+
+  .section-header .section-title {
+    font-size: 2.2rem;
+  }
+
+  .activity-cards {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+  }
+
+  .activity-card {
+    height: 350px;
+  }
+
+  .card-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .card-content .activity-title {
+    font-size: 1.6rem;
+  }
+
+  .card-content .activity-description {
+    font-size: 1rem;
+  }
+
+  .activity-decoration {
+    top: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header .section-title {
+    font-size: 2rem;
+  }
+
+  .activity-cards {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .activity-card {
+    height: 320px;
+  }
+
+  .card-content {
+    padding: 1.8rem 1.2rem;
+  }
+
+  .card-content .activity-title {
+    font-size: 1.5rem;
+  }
+
+  .top-banner .banner-title {
+    font-size: 2.5rem;
+  }
+
+  .activity-decoration {
+    width: 40px;
+    height: 40px;
+  }
+}

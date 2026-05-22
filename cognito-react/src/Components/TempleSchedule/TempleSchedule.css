@@ -1,0 +1,356 @@
+.temple-schedule-section {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+
+/* Improved Slider Styles */
+.ts-slider-container {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  min-height: 500px;
+  max-height: 800px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.ts-slider-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.ts-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ts-slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Moved title to bottom */
+.ts-slider-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end; /* Changed to bottom alignment */
+  justify-content: center;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 20%, transparent 70%);
+  z-index: 2;
+  padding-bottom: 80px; /* Added bottom spacing */
+}
+
+.ts-section-title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  padding: 0 20px;
+  max-width: 90%;
+  line-height: 1.2;
+  margin: 0 auto;
+}
+
+.ts-slider-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.ts-indicator {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ts-indicator.active {
+  background: #fff;
+  transform: scale(1.2);
+  border-color: #d4af37;
+}
+
+/* Unified Card Styles */
+.ts-schedule-container {
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.ts-schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Consistent card alignment */
+.ts-schedule-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  background: #fff;
+  min-height: 400px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.ts-card-video-container {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  aspect-ratio: 16/9; /* Consistent aspect ratio */
+}
+
+.ts-card-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.ts-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 2;
+}
+
+.ts-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 20px;
+  z-index: 3;
+  color: white;
+}
+
+.ts-card-header h3 {
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.ts-schedule-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  line-height: 1.2;
+}
+
+.ts-schedule-list li {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ts-schedule-list strong {
+  font-weight: 600;
+  color: #ffd700;
+}
+
+.ts-play-hint {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+}
+
+.ts-schedule-card:hover .ts-play-hint {
+  opacity: 0;
+}
+
+.ts-card-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, #d4af37, #ffd700, #d4af37);
+  background-size: 200% 200%;
+  animation: wave 3s linear infinite;
+  z-index: 3;
+}
+
+@keyframes wave {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+
+/* Unified Special Section */
+.ts-special-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.ts-schedule-card.ts-card-special {
+  flex: 1;
+  min-width: min(300px, 100%);
+  max-width: 800px;
+}
+
+/* Special Note Section */
+.ts-special-note {
+  flex: 1;
+  background: #f8f0e0;
+  border: 2px solid #d4af37;
+  border-radius: 0px;
+  padding: 25px;
+  min-width: min(300px, 100%);
+  max-width: 800px;
+  font-size: clamp(1rem, 1.1vw, 1.1rem);
+  font-weight: 500;
+  color: #5c3a00;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+  margin: 0 auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 15px;
+}
+
+.ts-note-icon {
+  font-size: 2rem;
+  margin-top: 4px;
+}
+
+.ts-special-note-content {
+  text-align: left;
+}
+
+.ts-special-note strong {
+  font-weight: 600;
+  color: #8b4513;
+}
+
+.ts-special-note ul {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.ts-special-note li {
+  margin-bottom: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .ts-slider-container {
+    height: 70vh;
+  }
+  .ts-slider-overlay {
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 900px) {
+  .ts-slider-container {
+    height: 65vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .ts-slider-container {
+    height: 60vh;
+    min-height: 400px;
+  }
+  .ts-slider-overlay {
+    padding-bottom: 50px;
+  }
+  .ts-special-note {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .ts-special-note-content {
+    text-align: center;
+  }
+  .ts-special-note ul {
+    display: inline-block;
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .ts-slider-container {
+    height: 55vh;
+    min-height: 350px;
+  }
+  .ts-slider-overlay {
+    padding-bottom: 40px;
+  }
+  .ts-section-title {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .ts-slider-container {
+    height: 50vh;
+    min-height: 300px;
+  }
+  .ts-slider-overlay {
+    padding-bottom: 30px;
+  }
+  .ts-slider-indicators {
+    bottom: 20px;
+  }
+}
+
+/* iPad Pro Portrait */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) {
+  .ts-slider-container {
+    height: 60vh;
+  }
+}
+
+/* iPad Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .ts-slider-container {
+    height: 80vh;
+  }
+}

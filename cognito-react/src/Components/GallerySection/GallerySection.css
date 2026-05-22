@@ -1,0 +1,351 @@
+/* ========== Root Gallery Layout ========== */
+.gallery-container {
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 10;
+}
+
+.gallery-header h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-header p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.gallery-card {
+  height: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform-style: preserve-3d;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.gallery-card:hover:not(.active) {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.card-front {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+  transform: translateZ(30px);
+}
+
+.card-title h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-title p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* ========== Overlay Styles ========== */
+.card-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 2rem;
+  backdrop-filter: blur(5px);
+}
+
+.overlay-content {
+  max-width: 1200px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+/* ========== Detail Section ========== */
+.card-detail {
+  padding: 3rem;
+  position: relative;
+}
+
+.detail-header {
+  margin-bottom: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.detail-header h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.detail-header h3 {
+  font-size: 1.5rem;
+  color: #7f8c8d;
+  font-weight: 400;
+}
+
+.description {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.description p {
+  font-size: 1.1rem;
+  color: #34495e;
+  margin-bottom: 1.5rem;
+}
+
+.marathi-text {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: 1.15rem;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+/* ========== Image Grid ========== */
+.images-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.image-item {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.image-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* First image larger for emphasis */
+.images-grid .image-item:first-child {
+  grid-column: span 2;
+  height: 400px;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+/* ========== Temple Main Preview ========== */
+.temple-main-preview {
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  background-color: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.temple-main-preview img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* ========== Close Button ========== */
+.close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #2c3e50;
+  z-index: 110;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: #f1f1f1;
+  transform: rotate(90deg);
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 992px) {
+  .gallery-card {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    padding: 3rem 1.5rem;
+  }
+
+  .gallery-header h2 {
+    font-size: 2rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-detail {
+    padding: 2rem 1.5rem;
+  }
+
+  .detail-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .detail-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .images-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image-item {
+    height: 180px;
+  }
+
+  .temple-main-preview img {
+    max-height: 60vh;
+  }
+
+  .close-btn {
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-header {
+    margin-bottom: 2rem;
+  }
+
+  .gallery-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .gallery-header p {
+    font-size: 1rem;
+  }
+
+  .gallery-card {
+    height: 220px;
+  }
+
+  .card-title h3 {
+    font-size: 1.3rem;
+  }
+
+  .card-title p {
+    font-size: 0.9rem;
+  }
+
+  .description p {
+    font-size: 1rem;
+  }
+
+  .marathi-text {
+    font-size: 1rem;
+  }
+
+  .image-item {
+    height: 150px;
+  }
+
+  .images-grid .image-item:first-child {
+    height: 280px;
+  }
+
+  .temple-main-preview img {
+    max-height: 50vh;
+  }
+}

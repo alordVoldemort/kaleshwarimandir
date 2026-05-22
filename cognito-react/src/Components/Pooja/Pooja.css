@@ -1,0 +1,1017 @@
+/* Core Styles */
+.pooja-container {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 250vh;
+}
+
+/* Fixed Container Alignment */
+.pooja-container-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Hero Slider Styles */
+.pooja-slider {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  margin-bottom: 60px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.pooja-slider-container {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.pooja-slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.pooja-slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+/* Fixed Slider Content Alignment */
+.pooja-slide-content {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 500px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 0.8s ease-out;
+  text-align: center;
+}
+
+.pooja-slide-content h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin-bottom: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.pooja-slider-book-btn {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+.pooja-slider-book-btn:hover {
+  background-color: #ff5252;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+}
+
+/* Slider dots */
+.pooja-slider-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.pooja-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pooja-dot.active {
+  background-color: white;
+  width: 30px;
+  border-radius: 6px;
+}
+
+/* All Pujas Section - Fixed Alignment */
+.pooja-all-section {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+.pooja-section-title {
+  text-align: center;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin-bottom: 50px;
+  color: #333;
+  position: relative;
+}
+
+.pooja-title-underline {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #ff6b6b, #ffa502);
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+/* Grid with Fixed Alignment */
+.pooja-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 350px), 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.pooja-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pooja-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.pooja-card-image-container {
+  height: 200px;
+  overflow: hidden;
+}
+
+.pooja-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.pooja-card:hover .pooja-card-image {
+  transform: scale(1.05);
+}
+
+.pooja-card-content {
+  padding: 25px;
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.pooja-card-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: var(--card-color);
+}
+
+.pooja-card-content h3 {
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.pooja-card-content p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+  flex-grow: 1;
+}
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Card Footer with Fixed Alignment */
+.pooja-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pooja-card-cost {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  font-weight: 700;
+  color: var(--card-color);
+  white-space: nowrap;
+}
+
+.pooja-book-now-btn {
+  background-color: var(--card-color);
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
+}
+
+.pooja-book-now-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pooja-btn-glow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: 0.5s;
+}
+
+.pooja-book-now-btn:hover .pooja-btn-glow {
+  left: 100%;
+}
+
+/* Booking Form Modal Styles with Fixed Alignment */
+.pooja-form-modal-overlay {
+  position: fixed;
+  top: 30px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(5px);
+  overflow: auto;
+  padding: 20px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.pooja-booking-form {
+   width: 100%;
+  max-width: 450px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: slideInUp 0.4s ease-out;
+  overflow-y: auto;
+  max-height: 76vh;
+}
+
+.pooja-form-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  color: #666;
+  transition: color 0.2s;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.pooja-form-close-btn:hover {
+  color: #333;
+}
+
+.pooja-form-close-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.pooja-booking-form h2 {
+  font-size: clamp(1.4rem, 3vw, 1.6rem);
+  margin-bottom: 20px;
+  color: #f17806;;
+  text-align: center;
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.pooja-highlight {
+     color: #f17806;
+    margin: 0 7px;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.pooja-form-group {
+  margin-bottom: 15px;
+}
+
+.pooja-form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 900;
+  color: #555;
+  font-size: clamp(0.8rem, 1.1vw, 0.9rem);
+}
+
+.pooja-input,
+.pooja-textarea {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+}
+
+.pooja-input:focus,
+.pooja-textarea:focus {
+  outline: none;
+  border-color: #ff6b6b;
+  box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.2);
+}
+
+.pooja-form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.pooja-form-group {
+  flex: 1;
+}
+
+.pooja-error-msg {
+  color: #e74c3c;
+  font-size: clamp(0.75rem, 1vw, 0.8rem);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.pooja-summary-section {
+  background-color: #f8f9fa;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.pooja-summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: clamp(0.8rem, 1.1vw, 0.9rem);
+}
+
+.pooja-summary-item:last-child {
+  margin-bottom: 0;
+}
+
+.pooja-amount {
+  font-weight: 700;
+  color: #ff6b6b;
+}
+
+.pooja-pay-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: clamp(0.9rem, 1.1vw, 0.95rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.pooja-pay-btn:hover {
+  background-color: #ff5252;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+}
+
+.pooja-btn-glow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: 0.5s;
+}
+
+.pooja-pay-btn:hover .pooja-btn-glow {
+  left: 100%;
+}
+
+/* Booking Status Modal styles */
+
+
+.pooja-status-content {
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  animation: zoomIn 0.3s ease-out;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.pooja-status-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pooja-status-icon.success {
+  background-color: rgba(46, 204, 113, 0.2);
+}
+
+.pooja-status-icon.success svg {
+  fill: #2ecc71;
+  width: 36px;
+  height: 36px;
+}
+
+.pooja-status-content h3 {
+  font-size: clamp(1.3rem, 3vw, 1.5rem);
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.pooja-status-content p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-size: clamp(0.9rem, 1.1vw, 1rem);
+}
+
+.pooja-status-ok-btn {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-size: clamp(0.9rem, 1.1vw, 1rem);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pooja-status-ok-btn:hover {
+  background-color: #ff5252;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+/* Animations */
+
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .pooja-slider {
+    height: 450px;
+  }
+}
+
+@media (max-width: 992px) {
+  .pooja-slider {
+    height: 400px;
+  }
+  
+  .pooja-slide-content {
+    bottom: 60px;
+  }
+  
+  .pooja-grid {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pooja-slider {
+    height: 350px;
+    margin-bottom: 40px;
+  }
+  
+  .pooja-all-section {
+    padding: 40px 0;
+  }
+  
+  .pooja-slide-content {
+    bottom: 50px;
+    max-width: 90%;
+  }
+  
+  .pooja-section-title {
+    margin-bottom: 40px;
+  }
+  
+  .pooja-card-image-container {
+    height: 180px;
+  }
+  
+  .pooja-card-content {
+    padding: 20px;
+  }
+  
+  .pooja-form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .pooja-slider-dots {
+    bottom: 10px;
+  }
+  
+  .pooja-slider {
+    height: 300px;
+  }
+  
+  .pooja-container-inner {
+    padding: 0 15px;
+  }
+  
+  .pooja-slide-content {
+    bottom: 40px !important;
+    max-width: 90%;
+  }
+  
+  .pooja-slide-content h2 {
+    margin-bottom: 26px;
+    font-size: clamp(1.5rem, 4vw, 1.8rem);
+  }
+  
+  .pooja-slider-book-btn {
+    padding: 10px 25px;
+  }
+  
+  .pooja-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .pooja-card-footer {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .pooja-booking-form {
+    padding: 20px 15px;
+  }
+  
+  .pooja-status-content {
+    padding: 25px 20px;
+  }
+  
+  .pooja-section-title {
+    font-size: clamp(1.6rem, 5vw, 2rem);
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pooja-slider {
+    height: 280px;
+  }
+  
+  .pooja-slide-content {
+    bottom: 30px;
+  }
+  
+  .pooja-slider-book-btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .pooja-card-image-container {
+    height: 160px;
+  }
+  
+  .pooja-card-content {
+    padding: 18px;
+  }
+  
+  .pooja-book-now-btn {
+    width: 100%;
+  }
+  
+  .pooja-booking-form {
+    width: 95%;
+    padding: 18px 12px;
+  }
+  
+  .pooja-status-content {
+    padding: 20px 15px;
+  }
+  
+  .pooja-status-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 400px) {
+  .pooja-slider {
+    height: 250px;
+  }
+  
+  .pooja-slide-content {
+    bottom: 20px;
+  }
+  
+  .pooja-slider-book-btn {
+    padding: 8px 15px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Tablet Portrait */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .pooja-slider {
+    height: 380px;
+  }
+  
+  .pooja-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet Landscape */
+@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+  .pooja-slider {
+    height: 450px;
+  }
+  
+  .pooja-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile Landscape */
+@media (max-height: 480px) and (orientation: landscape) {
+  .pooja-slider {
+    height: 300px;
+  }
+  
+  .pooja-slide-content {
+    bottom: 30px;
+  }
+  
+  .pooja-slider-book-btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+.pooja-form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1; /* ensures dropdown appears above other elements */
+}
+
+.pooja-form-group label {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #3a1c0a;
+}
+
+.pooja-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%227%22%20viewBox%3D%220%200%2010%207%22%20fill%3D%22none%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M1%201L5%205L9%201%22%20stroke%3D%22%23333%22%20stroke-width%3D%222%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 12px;
+  padding: 0.75rem 1rem;
+  padding-right: 2.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.pooja-input:focus {
+  border-color: #6a3093;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(106, 48, 147, 0.2);
+}
+
+.pooja-error-msg {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Remove large size issue on mobile/tablet */
+select.pooja-input option {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .pooja-form-group label {
+    font-size: 0.95rem;
+  }
+
+  .pooja-input {
+    font-size: 0.95rem;
+    padding: 0.65rem 1rem;
+    padding-right: 2.5rem;
+  }
+
+  select.pooja-input option {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pooja-form-group label {
+    font-size: 0.9rem;
+  }
+
+  .pooja-input {
+    font-size: 0.9rem;  
+    padding: 0.6rem 0.9rem;
+    padding-right: 2.2rem;
+  }
+
+  select.pooja-input option {
+    font-size: 0.9rem;
+  }
+}
+
+/* ================= Modal Overlay ================= */
+.pooja-form-modal-overlay {
+   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+/* ================= Modal Box ================= */
+.pooja-booking-form {
+  background: #fff;
+  color: #333;
+  border-radius: 12px;
+  padding: 30px 25px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  animation: popupFade 0.3s ease-in-out;
+}
+
+/* ================= Close Button ================= */
+.pooja-form-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.pooja-form-close-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: #333;
+}
+
+/* ================= Input Fields ================= */
+.pooja-form-group {
+  margin-bottom: 16px;
+}
+
+.pooja-input,
+.pooja-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  font-family: inherit;
+}
+
+.pooja-textarea {
+  resize: vertical;
+}
+
+/* ================= Error Message ================= */
+.pooja-error-msg {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* ================= Summary Section ================= */
+.pooja-summary-section {
+  margin: 20px 0;
+  padding: 12px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+}
+
+.pooja-summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+/* ================= Booking Button ================= */
+.pooja-pay-btn {
+  background: #d35400;
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+
+.pooja-pay-btn:hover {
+  background: #b84300;
+}
+
+.pooja-btn-glow {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-25deg);
+  animation: glow 2s infinite linear;
+}
+
+@keyframes glow {
+  0% {
+    left: -75%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* ================= Booking Status Modal ================= */
+.pooja-form-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+
+
+.pooja-status-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); 
+}
+
+.pooja-status-icon svg {
+  width: 40px;
+  height: 40px;
+  fill: green;
+  margin-bottom: 10px;
+}
+
+.pooja-status-ok-btn {
+  background: #d35400;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 576px) {
+  .pooja-booking-form {
+    padding: 20px 15px;
+  }
+
+  .pooja-status-content {
+    padding: 20px 15px;
+  }
+
+  .pooja-form-close-btn {
+    top: 6px;
+    right: 6px;
+  }
+}
+
+/* ================= Animation ================= */
+@keyframes popupFade {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.pooja-status-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); /* dim background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* ensure it's above everything */
+  overflow: hidden;
+}
