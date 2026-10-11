@@ -1,9 +1,9 @@
 import React from "react";
+import assetUrl from "../../assetUrl";
 import { useLanguage } from "../../LanguageContext";
 import "./Tempact.css";
 
 // Define base CDN path
-const cdn = "https://zonixtec.com/cdn/";
 
 const activityContent = {
   en: {
@@ -13,46 +13,46 @@ const activityContent = {
          title: "Navratri Saree Distribution Initiative",
         description:
           "During Navratri, the Temple Trust distributes sarees to underprivileged women as part of its welfare initiative.",
-        image: `${cdn}mata10.webp`,
+        image: assetUrl("mata10.webp"),
         color: "#B1045B",
-        icon: `${cdn}saree-icon.jpg`,
+        icon: assetUrl("saree-icon.jpg"),
       },
       {
         title:" Marriage Assistance Scheme",
         description: "The Trust organizes and sponsors weddings for underprivileged individuals, supporting them with dignity and compassion.",
-        image: `${cdn}home3.JPG`,
+        image: assetUrl("home3.JPG"),
         color: "#007C80",
-        icon: `${cdn}wedding-icon (1).png`,
+        icon: assetUrl("wedding-icon (1).png"),
       },
       {
         title: "Blood Donation Camp",
         description:  "The Trust regularly organizes blood donation camps to support hospitals and save lives during medical emergencies.",
-        image: `${cdn}mata44.webp`,
+        image: assetUrl("mata44.webp"),
         color: "#C27C0E",
-        icon: `${cdn}blood-icon (1).png`,
+        icon: assetUrl("blood-icon (1).png"),
       },
       {
         title: "Food Donation",
         description: "Food Donation is a religious and social service in temples, where free, wholesome food is provided to devotees.",
-        image: `${cdn}mata55.webp`,
+        image: assetUrl("mata55.webp"),
         color: "#6C3483",
-        icon: `${cdn}food-icon1.png`,
+        icon: assetUrl("food-icon1.png"),
       },
       {
         title: "Cultural Heritage Events",
         description:
           "Traditional music, dance, and spiritual talks are organized to preserve and promote Indian culture.",
-        image: `${cdn}mata88.webp`,
+        image: assetUrl("mata88.webp"),
         color: "#2874A6",
-        icon: `${cdn}icon-cluture.png`,
+        icon: assetUrl("icon-cluture.png"),
       },
       {
         title: "Eco-Friendly Initiatives",
         description:
           "Programs include tree plantation activities, plastic-free environment and sanitation initiatives.",
-        image: `${cdn}matahome.jpg`,
+        image: assetUrl("matahome.jpg"),
         color: "#229954",
-        icon: `${cdn}eco-icon__1.png`,
+        icon: assetUrl("eco-icon__1.png"),
       },
     ],
   },
@@ -63,48 +63,48 @@ const activityContent = {
         title: "नवरात्र साडी वितरण उपक्रम",
         description:
           "नवरात्री दरम्यान, मंदिर ट्रस्ट त्यांच्या कल्याणकारी उपक्रमाचा भाग म्हणून दुर्बल, गरजू व आर्थिकदृष्ट्या दुर्बल महिलांना सन्मानपूर्वक साड्यांचे वाटप करते.",
-        image: `${cdn}mata10.webp`,
+        image: assetUrl("mata10.webp"),
         color: "#B1045B",
-        icon: `${cdn}saree-icon.jpg`,
+        icon: assetUrl("saree-icon.jpg"),
       },
       {
         title: "विवाह योजना",
         description:
           "ट्रस्ट दुर्बल व गरजू व्यक्तींसाठी विवाहसोहळे आयोजित व प्रायोजित करते, त्यांच्या आयुष्याच्या या नव्या प्रवासात सन्मान, प्रेम व करुणेने त्यांना आधार देते.",
-        image: `${cdn}home3.JPG`,
+        image: assetUrl("home3.JPG"),
         color: "#007C80",
-        icon: `${cdn}wedding-icon (1).png`,
+        icon: assetUrl("wedding-icon (1).png"),
       },
       {
         title: "रक्तदान शिबिर",
         description:
           "वैद्यकीय आपत्कालीन परिस्थितीत रुग्णालयांना मदत करण्यासाठी आणि जीव वाचवण्यासाठी ट्रस्ट नियमितपणे रक्तदान शिबिरे आयोजित करते.",
-        image: `${cdn}mata44.webp`,
+        image: assetUrl("mata44.webp"),
         color: "#C27C0E",
-        icon: `${cdn}blood-icon (1).png`,
+        icon: assetUrl("blood-icon (1).png"),
       },
       {
         title: "अन्नदान सेवा",
         description:
           "अन्नदान सेवा ही मंदिरातील एक धार्मिक आणि सामाजिक सेवा आहे, जिथे भक्तांना आणि गरजूंना मोफत, अन्न दिलं जातं.",
-        image: `${cdn}mata55.webp`,
+        image: assetUrl("mata55.webp"),
         color: "#6C3483",
-        icon: `${cdn}food-icon (1).png`,
+        icon: assetUrl("food-icon (1).png"),
       },
       {
         title: "संस्कृती वारसा कार्यक्रम",
         description:"भारतीय संस्कृतीचे जतन आणि संवर्धन करण्यासाठी पारंपारिक संगीत, नृत्य आणि आध्यात्मिक व्याख्याने आयोजित केली जातात.",
-        image: `${cdn}mata88.webp`,
+        image: assetUrl("mata88.webp"),
         color: "#2874A6",
-        icon: `${cdn}icon-cluture.png`,
+        icon: assetUrl("icon-cluture.png"),
       },
       {
         title: "पर्यावरण पूरक उपक्रम",
         description:
           "कार्यक्रमांमध्ये वृक्षारोपण उपक्रम, प्लास्टिकमुक्त पर्यावरण, स्वच्छता उपक्रम व हरित क्षेत्र वाढवण्याचे प्रयत्न यांचा समावेश आहे.",
-        image: `${cdn}matahome.jpg`,
+        image: assetUrl("matahome.jpg"),
         color: "#229954",
-        icon: `${cdn}eco-icon__1.png`,
+        icon: assetUrl("eco-icon__1.png"),
       },
     ],
   },
@@ -121,7 +121,7 @@ const Activities = () => {
       <div className="top-banner">
         <div className="banner-overlay"></div>
         <img
-          src={`${cdn}home3.JPG`}
+          src={assetUrl("home3.JPG")}
           alt="Community Activities Banner"
           className="banner-image-activities"
           loading="lazy"

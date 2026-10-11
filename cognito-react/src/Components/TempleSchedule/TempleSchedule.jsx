@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
+import assetUrl from "../../assetUrl";
 import { motion } from 'framer-motion';
 import './TempleSchedule.css';
 import { useLanguage } from '../../LanguageContext';
@@ -8,19 +9,18 @@ const TempleSchedule = () => {
   const videoRefs = useRef([]);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const cdn = "https://zonixtec.com/cdn/";
 
   const sliderImages = [
-    `${cdn}home3.JPG`,
-    `${cdn}Temple2.webp`
+    assetUrl("home3.JPG"),
+    assetUrl("Temple2.webp")
     
   ];
   
-  const morningVideo = `${cdn}sun22.mp4`;
-  const afternoonVideo = `${cdn}Clouds.mp4`;
-  const eveningVideo = `${cdn}sunset.mp4`;
-  const nightvedio = `${cdn}night.mp4`;
-  const nightimg = `${cdn}spicalpoojause.jpg`; 
+  const morningVideo = assetUrl("sun22.mp4");
+  const afternoonVideo = assetUrl("Clouds.mp4");
+  const eveningVideo = assetUrl("sunset.mp4");
+  const nightvedio = assetUrl("night.mp4");
+  const nightimg = assetUrl("spicalpoojause.jpg"); 
 
   useEffect(() => {
     const interval = setInterval(() => {

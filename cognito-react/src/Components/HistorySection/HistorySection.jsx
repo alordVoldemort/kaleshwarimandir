@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect, useMemo } from "react";
+import assetUrl from "../../assetUrl";
 import { motion, AnimatePresence } from "framer-motion";
 import "./HistorySection.css";
 import { useLanguage } from "../../LanguageContext";
@@ -17,19 +18,18 @@ function toDevanagari(str) {
 }
 
 // CDN Images
-const cdnPath = "https://zonixtec.com/cdn/";
-const about1 = `${cdnPath}home3.JPG`;
-const about2 = `${cdnPath}mata111.webp`;
-const about3 = `${cdnPath}mata44.webp`;
-const about4 = `${cdnPath}mata55.webp`;
-const about5 = `${cdnPath}mata88.webp`;
-const petal1 = `${cdnPath}petal2.webp`;
-const petal2 = `${cdnPath}petal2.webp`;
-const petal3 = `${cdnPath}petal2.webp`;
-const flower1 = `${cdnPath}petal2.webp`;
-const flower2 = `${cdnPath}petal2.webp`;
-const flower3 = `${cdnPath}petal2.webp`;
-const flowerCluster = `${cdnPath}petal2.webp`;
+const about1 = assetUrl("home3.JPG");
+const about2 = assetUrl("mata111.webp");
+const about3 = assetUrl("mata44.webp");
+const about4 = assetUrl("mata55.webp");
+const about5 = assetUrl("mata88.webp");
+const petal1 = assetUrl("petal2.webp");
+const petal2 = assetUrl("petal2.webp");
+const petal3 = assetUrl("petal2.webp");
+const flower1 = assetUrl("petal2.webp");
+const flower2 = assetUrl("petal2.webp");
+const flower3 = assetUrl("petal2.webp");
+const flowerCluster = assetUrl("petal2.webp");
 
 const historyContent = {
   en: {

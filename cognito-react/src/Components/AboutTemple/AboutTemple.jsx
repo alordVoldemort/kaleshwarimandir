@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import assetUrl from "../../assetUrl";
 import './AboutTemple.css';
 import { useLanguage } from '../../LanguageContext';
 
@@ -12,11 +13,11 @@ const AboutTemple = () => {
   const mapRef = useRef();
 
   // CDN Image Paths
-  const templeImage = 'https://zonixtec.com/cdn/home3.JPG';
-  const img1 = 'https://zonixtec.com/cdn/Temple2.webp';
-  const img2 = 'https://zonixtec.com/cdn/kaleshwari.webp';
-  const kalash = 'https://zonixtec.com/cdn/kalash.webp';
-  const templedetail = 'https://zonixtec.com/cdn/mata111.webp';
+  const templeImage = assetUrl("home3.JPG");
+  const img1 = assetUrl("Temple2.webp");
+  const img2 = assetUrl("kaleshwari.webp");
+  const kalash = assetUrl("kalash.webp");
+  const templedetail = assetUrl("mata111.webp");
 
   useEffect(() => {
     const revealOnScroll = (entries, observer) => {

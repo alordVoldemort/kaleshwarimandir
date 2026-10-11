@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import assetUrl from "../../assetUrl";
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../LanguageContext';
@@ -24,7 +25,7 @@ const Navbar = () => {
     setDropdownOpen(null);
   };
 
-  const logoUrl = "https://zonixtec.com/cdn/logonew.PNG";
+  const logoUrl = assetUrl("logonew.PNG");
 
   const texts = {
     templeName: isMarathi ? 'काळेश्वरी मंदिर अन्नदान छत्र' : 'Kaleshwari Mandir Annadan Chhatra',

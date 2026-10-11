@@ -2,25 +2,26 @@
   import React, { useEffect, useState } from 'react';
   import './ImportantDates.css';
   import { useLanguage } from '../../LanguageContext';
+  import assetUrl from "../../assetUrl";
 
   
-const templeImage = "https://zonixtec.com/cdn/home3.JPG";
-const eventBg1 = "https://zonixtec.com/cdn/maha11.jpg";
-const eventBg2 = "https://zonixtec.com/cdn/shivvvv.jpg";
-const eventBg3 = "https://zonixtec.com/cdn/maha-shivratri-special.png";
-const eventBg4 = "https://zonixtec.com/cdn/maharaj17.jpg";
-const eventBg5 = "https://zonixtec.com/cdn/gudi.jpg";
-const eventBg6 = "https://zonixtec.com/cdn/jayhanuman.jpg";
-const eventBg7 = "https://zonixtec.com/cdn/guru07.jpg"; 
-const eventBg8 = "https://zonixtec.com/cdn/Shardiya_Navratri.jpg";
-const eventBg9 = "https://zonixtec.com/cdn/khoja.jpg";
-const eventBg10 = "https://zonixtec.com/cdn/diwali1.jpg";
-const eventBg11 = "https://zonixtec.com/cdn/vishunu.jpg";
-const eventBg12 = "https://zonixtec.com/cdn/kalbhairav2.jpg";
-const eventBg13 = "https://zonixtec.com/cdn/khandobamaharaj.jpg";
-const eventBg14 = "https://zonixtec.com/cdn/khandobamaharaj2.jpg";
-const eventBg15 = "https://zonixtec.com/cdn/dataa04.jpg";
-const eventBg16 = "https://zonixtec.com/cdn/shivparvati1.jpg";
+const templeImage = assetUrl("home3.JPG");
+const eventBg1 = assetUrl("maha11.jpg");
+const eventBg2 = assetUrl("shivvvv.jpg");
+const eventBg3 = assetUrl("maha-shivratri-special.png");
+const eventBg4 = assetUrl("maharaj17.jpg");
+const eventBg5 = assetUrl("gudi.jpg");
+const eventBg6 = assetUrl("jayhanuman.jpg");
+const eventBg7 = assetUrl("guru07.jpg"); 
+const eventBg8 = assetUrl("Shardiya_Navratri.jpg");
+const eventBg9 = assetUrl("khoja.jpg");
+const eventBg10 = assetUrl("diwali1.jpg");
+const eventBg11 = assetUrl("vishunu.jpg");
+const eventBg12 = assetUrl("kalbhairav2.jpg");
+const eventBg13 = assetUrl("khandobamaharaj.jpg");
+const eventBg14 = assetUrl("khandobamaharaj2.jpg");
+const eventBg15 = assetUrl("dataa04.jpg");
+const eventBg16 = assetUrl("shivparvati1.jpg");
 
   // No need to import rangoliPattern if not directly used in JS (it's in CSS)
   // import rangoliPattern from '../../assets/maha.jpg'; 

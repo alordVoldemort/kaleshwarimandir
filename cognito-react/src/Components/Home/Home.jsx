@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import assetUrl from "../../assetUrl";
 import Slider from "react-slick";
 import { AnimatePresence, motion } from "framer-motion";
 import { useNavigate } from "react-router-dom"; // ✅ added for navigation
@@ -8,10 +9,9 @@ import "slick-carousel/slick/slick-theme.css";
 import { useLanguage } from "../../LanguageContext";
 
 // CDN paths for all images
-const CDN_BASE = "https://zonixtec.com/cdn/";
-const img1 = CDN_BASE + "home3.JPG";
-const img2 = CDN_BASE + "IMG_7181.webp";
-const img3 = CDN_BASE + "matahome.jpg";
+const img1 = assetUrl("home3.JPG");
+const img2 = assetUrl("IMG_7181.webp");
+const img3 = assetUrl("matahome.jpg");
 
 const NextArrow = (props) => {
   const { className, onClick } = props;

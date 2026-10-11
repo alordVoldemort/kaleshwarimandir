@@ -1,9 +1,10 @@
 import React, { useRef, useEffect } from "react";
+import assetUrl from "../../assetUrl";
 import { useLanguage } from "../../LanguageContext";
 import "./Gabhara.css";
 
 // CDN image path
-const cdnImage = "https://zonixtec.com/cdn/home3.JPG"; // Replace with the actual CDN path for the image
+const cdnImage = assetUrl("home3.JPG"); // Replace with the actual CDN path for the image
 
 const Gabhara = () => {
   const { isMarathi } = useLanguage();
